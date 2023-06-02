@@ -1,0 +1,43 @@
+*,
+*:before *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: "Old Standard TT", serif;
+  font-size: 18px;
+}
+
+button {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5rem 0.5rem;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s ease-in-out background-color;
+  background-color: snow;
+}
+
+.body--dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.button--light {
+  color: #333;
+}
+
+.button--dark {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 0 10px 5px #f1790a80;
+}

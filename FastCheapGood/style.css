@@ -1,0 +1,37 @@
+*,
+*:before *:after {
+  box-sizing: absolute;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 2rem 1rem;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  height: 2rem;
+  width: 2rem;
+}
+
+label {
+  font-size: 3rem;
+}

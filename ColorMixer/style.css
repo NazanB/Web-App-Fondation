@@ -9,7 +9,7 @@ html {
   font-weight: bold;
 }
 body {
-  background-color: aqua;
+  _background-color: aqua;
 }
 input#red {
   accent-color: red;

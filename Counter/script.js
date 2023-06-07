@@ -4,7 +4,7 @@ let counter = 0;
 let counterMax = 100;
 
 document.getElementById("main").addEventListener("click", () => {
-  if (counter === 100) {
+  if (counter === counterMax) {
     counter = 0;
   } else {
     counter++;
@@ -20,7 +20,7 @@ document.getElementById("button").addEventListener("click", () => {
 
 document.addEventListener("keydown", (event) => {
   if (event.code === "Enter" || event.code === "Space") {
-    if (counter === 100) {
+    if (counter === counterMax) {
       counter = 0;
     } else {
       counter++;

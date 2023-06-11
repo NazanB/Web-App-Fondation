@@ -1,5 +1,5 @@
 "use strict";
-
+/*
 let rangeInputRed = document.getElementById("red");
 let rangeInputGreen = document.getElementById("green");
 let rangeInputBlue = document.getElementById("blue");
@@ -41,4 +41,23 @@ function changeColor(r, g, b) {
 function rangeValueToHex(value) {
   value = Number.parseInt(value);
   return ("0" + value.toString(16)).substr(-2);
+}
+
+*/
+
+document.addEventListener("input", () => {
+  let rangeInputRed = document.getElementById("red");
+  let rangeInputGreen = document.getElementById("green");
+  let rangeInputBlue = document.getElementById("blue");
+
+  colorChange(
+    rangeInputRed.valueAsNumber,
+    rangeInputGreen.valueAsNumber,
+    rangeInputBlue.valueAsNumber
+  );
+});
+
+function colorChange(red, green, blue) {
+  document.body.style.backgroundColor =
+    "rgb(" + red + "," + green + "," + blue + ")";
 }

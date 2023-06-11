@@ -1,49 +1,32 @@
 "use strict";
-const todoList = document.querySelector("#list");
-const input = document.querySelector("new-todo");
-const newBtn = document.querySelector("add-btn");
 
-const state = {
-  todos: [
-    {
-      id: 1,
+let myInput = document.getElementById("new-todo");
+let btn = document.getElementById("add-btn");
+let liste = document.getElementById("list");
+let btnRemove = document.getElementById("remove-btn");
 
-      description: "Learn HTML",
-      done: false,
-    },
-    {
-      id: 2,
-      description: "Learn CSS",
-      done: false,
-    },
-  ],
-};
+btn.addEventListener("click", () => {
+  let newTodo = document.createElement("li");
 
-function addTodo() {
-  state.todos.push({
-    id: +new Date(),
-    description: descriptionInput,
-    done: false,
+  let checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  newTodo.appendChild(checkbox);
+
+  let todoText = document.createElement("span");
+  todoText.innerText = myInput.value;
+  newTodo.appendChild(todoText);
+
+  liste.appendChild(newTodo);
+  myInput.value = "";
+});
+
+btnRemove.addEventListener("click", () => {
+  let checkboxes = document.querySelectorAll("#list input[type='checkbox']");
+
+  checkboxes.forEach((checkbox) => {
+    if (checkbox.checked) {
+      let listItem = checkbox.parentNode;
+      listItem.parentNode.removeChild(listItem);
+    }
   });
-}
-
-function render() {
-  todoList.innerHTML = "";
-
-  for (let todo of State.todos) {
-    const li = document.createElement("li");
-    li.innerText = todo.description;
-
-    todoList.appendChild(li);
-  }
-}
-
-newBtn.addEventListener("click", () => {
-  if (input.ariaValueMax.length > 3) {
-    console.log(input.value);
-    addTodo(input.value);
-    console.log(state.todos);
-    render();
-    input.value = "";
-  }
 });

@@ -8,9 +8,11 @@ html {
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
 }
-body {
-  _background-color: aqua;
+header {
+  display: flex;
+  justify-content: space-between;
 }
+
 input#red {
   accent-color: red;
 }

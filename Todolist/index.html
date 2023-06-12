@@ -10,10 +10,29 @@
 
 <body>
     <h1>Todo List</h1>
-    <input type="text" id="new-todo" />
-    <button id="add-btn">Add</button>
+
+    <div id="div-filter">
+        <input type="radio" id="input-all" name="fav_language" value="All">
+        <label for="label-all">All</label><br>
+        <input type="radio" id="input-open" name="fav_language" value="Open">
+        <label for="label-open">Open</label><br>
+        <input type="radio" id="input-done" name="fav_language" value="Done">
+        <label for="label-done">Done</label>
+    </div>
+    <br>
     <button id="remove-btn">Remove done Todos</button>
-    <ul id="list"></ul>
+    <br>
+    <br>
+    <div>
+        <input type="text" id="new-todo" placeholder="Whats up?" />
+        <button id="add-btn">Add</button>
+
+    </div>
+
+    <div>
+        <ul id="list"></ul>
+    </div>
+
 
     <script src="script.js"></script>
 </body>
